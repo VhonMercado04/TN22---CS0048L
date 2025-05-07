@@ -32,7 +32,7 @@ while True:
         print("\nThe sum of",num1,"and",num2," is :", add(num1,num2),"\n")
     
     elif choice == "b":
-        print("\nThe difference is", num1, "and", num2, " is :", sub(num1,num2),"\n")
+        print("\nThe difference between", num1, "and", num2, " is :", sub(num1,num2),"\n")
 
     elif choice == "c":
         print("\nThe product of", num1, "and", num2, "is :", mul(num1,num2),"\n")
@@ -44,6 +44,6 @@ while True:
             print("\nThe quotient of", num1, "and", num2, "is :", div(num1,num2),"\n")
 
     else:
-        print("Invalid input")
+        print("\nInvalid input!")
 
     
