@@ -2,15 +2,16 @@ ToDoList = []
 
 def add_task(task):
     ToDoList.append(task)
-    print("\n",task,"is added to the list.")
+    print("\n",task,"was added to the list.")
 
 def remove_task(task):
-    try:
-        ToDoList.remove(task)
-        print("\n",task,"removed from the list.")
-    
-    except ValueError:
-        print("\n",task,"is not found in the list.")    
+    task_lower = task.lower()
+    for t in ToDoList:
+        if t.lower() == task_lower:
+            ToDoList.remove(t)
+            print(f"\n{t} was removed from the list.")
+            return
+    print(f"\n{task} was not found in the list.")  
 
 def view_task():
     if not ToDoList:
@@ -19,9 +20,9 @@ def view_task():
         print("\n----------------")
         print("Your To-Do list:")
         print("----------------")
-        for num_list, list in enumerate(ToDoList):
+        for num_list, task in enumerate(ToDoList):
             
-            print((num_list + 1),".", list)
+            print((num_list + 1),".", task)
 while True:
     print("\n=====================")
     print("-- To-Do list Menu --")
@@ -46,4 +47,4 @@ while True:
         view_task()   
 
     else: 
-        print("Invalid input")     
+        print("\nInvalid input!")     
