@@ -1,11 +1,11 @@
 
 def cel_to_fah(cel):
     fah_res = ((cel * 9)/5)+32
-    return fah_res
+    return float(fah_res)
 
 def fah_to_cel(fah):
     cel_res = ((fah - 32)*5)/9
-    return cel_res
+    return float(cel_res)
 
 while True:
     print("\n====================")
@@ -20,11 +20,11 @@ while True:
         break
     
     if choice == 1:
-        celsius = int(input("Enter Temperature in Celsius: "))
+        celsius = float(input("Enter Temperature in Celsius: "))
         print("Temperature in Fahrenheit: ",cel_to_fah(celsius))
     
     elif choice == 2:
-        fahrenheit = int(input("Enter Temperature in Fahrenheit: "))
+        fahrenheit = float(input("Enter Temperature in Fahrenheit: "))
         print("Temperature in Celsius: ",fah_to_cel(fahrenheit))
     
     else:
